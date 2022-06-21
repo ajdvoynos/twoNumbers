@@ -11,3 +11,8 @@ export function toArray(node){
   }
   return arr;
 }
+
+export function toLinkedList(arr, i = 0){
+  if(i == arr.length) return;
+  return new ListNode(arr[i], toLinkedList(arr, ++i))
+}
